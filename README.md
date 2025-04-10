@@ -1,10 +1,3 @@
----
-marp: true
-theme: gaia
-paginate: true
-highlightLines: true
----
-
 # Corso C++
 
 ## Esempio: Hello World in C++
@@ -22,3 +15,5 @@ int main() {
     cout << "Hello from C++!" << endl;
     return 0;
 }
+
+
