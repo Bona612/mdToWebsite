@@ -34,5 +34,6 @@ g++ main.cpp -o main
 
     Hello from C++!
 
+---
 
 ![top-right](https://muralsyourway.vtexassets.com/arquivos/ids/236366/Black-Marble-Texture-Wallpaper-Mural.jpg?v=638164405494500000)
