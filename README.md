@@ -1,15 +1,10 @@
----
-marp: true
-style: |
-  .logo {
-    position: fixed;
-    top: 10px;    /* Adjust the vertical position */
-    left: 10px;   /* Adjust the horizontal position */
-    width: 100px; /* Adjust the size of the logo */
-    z-index: 10;  /* Ensure it stays on top of other content */
-  }
----
-
+<style>
+img[alt~="top-right"] {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+</style>
 
 # Corso C++
 
@@ -40,4 +35,4 @@ g++ main.cpp -o main
     Hello from C++!
 
 
-![width:200px](https://muralsyourway.vtexassets.com/arquivos/ids/236366/Black-Marble-Texture-Wallpaper-Mural.jpg?v=638164405494500000){.logo}
+![top-right](https://muralsyourway.vtexassets.com/arquivos/ids/236366/Black-Marble-Texture-Wallpaper-Mural.jpg?v=638164405494500000)
