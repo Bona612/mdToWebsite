@@ -1,4 +1,4 @@
----
+<!-- ---
 marp: true
 style: |
     section {
@@ -7,7 +7,8 @@ style: |
         background-repeat: no-repeat;
         background-position: 95% 30px;
     }
----
+--- -->
+
 # Corso C++
 
 ## Esempio: Hello World in C++
