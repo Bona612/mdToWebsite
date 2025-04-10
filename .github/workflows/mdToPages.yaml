@@ -27,6 +27,23 @@ jobs:
       - name: Copy images directory (if exists)
         run: if [[ -d img ]]; then cp -R img build/img; fi
 
+      # Add Marp-specific metadata to the Markdown file before translation
+      - name: Insert Marp Style Block
+        run: |
+          cat <<EOF > README.md
+          ---
+          marp: true
+          style: |
+            section {
+              background-image: url('img/ddx_logo.png');
+              background-size: 20%;
+              background-repeat: no-repeat;
+              background-position: 95% 30px;
+            }
+          ---
+          $(cat README.md)  # Append original content after the Marp front matter
+        shell: bash
+
       - name: Marp Build (README)
         uses: docker://marpteam/marp-cli:v3.0.2
         with:
