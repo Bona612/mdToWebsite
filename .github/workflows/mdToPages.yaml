@@ -29,7 +29,21 @@ jobs:
 
       # Add Marp-specific metadata to the Markdown file before translation
       - name: Insert Marp Style Block
-        run: ./addStyle.sh
+        run: |
+          echo "---" > temp_README.md
+          echo "marp: true" >> temp_README.md
+          echo "style: |" >> temp_README.md
+          echo "  section {" >> temp_README.md
+          echo "    background-image: url('img/ddx_logo.png');" >> temp_README.md
+          echo "    background-size: 20%;" >> temp_README.md
+          echo "    background-repeat: no-repeat;" >> temp_README.md
+          echo "    background-position: 95% 30px;" >> temp_README.md
+          echo "  }" >> temp_README.md
+          echo "---" >> temp_README.md
+
+          cat README.md >> temp_README.md
+
+          mv temp_README.md README.md
         shell: bash
 
       - name: Marp Build (README)
