@@ -1,3 +1,20 @@
+<!-- Front Matter -->
+<style>
+  /* Global style for the logo */
+  .logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100px; /* Adjust the size of the logo */
+    z-index: 9999; /* Ensures the logo is above slide content */
+  }
+
+  /* Make the logo appear on every slide */
+  section {
+    position: relative;
+  }
+</style>
+
 # Corso C++
 
 ## Esempio: Hello World in C++
@@ -25,3 +42,7 @@ g++ main.cpp -o main
 ```
 
     Hello from C++!
+
+
+<!-- Adding the logo at the top of every slide -->
+<img src="https://source.unsplash.com/random/100x100" class="logo" />
