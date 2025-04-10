@@ -15,5 +15,13 @@ int main() {
     cout << "Hello from C++!" << endl;
     return 0;
 }
+```
 
+    Writing main.cpp
 
+```bash
+g++ main.cpp -o main
+./main
+```
+
+    Hello from C++!
