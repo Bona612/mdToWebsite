@@ -41,10 +41,8 @@ jobs:
           echo "  }" >> temp_README.md
           echo "---" >> temp_README.md
 
-          # Append the original README.md content after the Marp front matter
           cat README.md >> temp_README.md
 
-          # Replace the original README.md with the modified one
           mv temp_README.md README.md
         shell: bash
 
