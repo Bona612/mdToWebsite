@@ -1,7 +1,20 @@
-Corso C++
+---
+marp: true
+theme: gaia
+paginate: true
+highlightLines: true
+---
 
-```python
-%%writefile main.cpp
+# Corso C++
+
+## Esempio: Hello World in C++
+
+---
+
+### Scriviamo un file `main.cpp`
+
+```cpp
+// main.cpp
 #include <iostream>
 using namespace std;
 
@@ -9,16 +22,3 @@ int main() {
     cout << "Hello from C++!" << endl;
     return 0;
 }
-```
-
-    Writing main.cpp
-
-
-
-```python
-!g++ main.cpp -o main
-!./main
-```
-
-    Hello from C++!
-
