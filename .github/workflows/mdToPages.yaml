@@ -72,29 +72,26 @@ jobs:
       - name: Marp Build (README)
         uses: docker://marpteam/marp-cli:v3.0.2
         with:
-          args: README.md -o build/index.html
+          args: marp_README.md -o build/index.html
         env:
           MARP_USER: root:root
 
       - name: Marp Build (README.pdf)
         uses: docker://marpteam/marp-cli:v3.0.2
         with:
-          args: README.md --allow-local-files -o build/README.pdf
+          args: marp_README.md --allow-local-files -o build/README.pdf
         env:
           MARP_USER: root:root
 
       - name: Marp Build (README.pptx)
         uses: docker://marpteam/marp-cli:v3.0.2
         with:
-          args: README.md --allow-local-files -o build/README.pptx
+          args: marp_README.md --allow-local-files -o build/README.pptx
         env:
           MARP_USER: root:root
 
       - name: Check file encoding and content
         run: |
-          file -i README.md
-          head README.md
-
           file -i marp_README.md
           head marp_README.md
 
