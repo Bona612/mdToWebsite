@@ -30,6 +30,9 @@ jobs:
       # Add Marp-specific metadata to the Markdown file before translation
       - name: Insert Marp Style Block
         run: |
+          export LC_ALL=en_US.UTF-8
+          export LANG=en_US.UTF-8
+
           echo "---" > temp_README.md
           echo "marp: true" >> temp_README.md
           echo "style: |" >> temp_README.md
