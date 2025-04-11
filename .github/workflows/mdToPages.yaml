@@ -26,8 +26,8 @@ jobs:
           export LANGUAGE=en_US:en
           export LC_ALL=en_US.UTF-8
 
-          file -i marp_README.md
-          head marp_README.md
+          file -i README.md
+          head README.md
 
       - name: Checkout code
         uses: actions/checkout@v3
@@ -36,27 +36,27 @@ jobs:
         run: |
           mkdir -p build
 
-          file -i marp_README.md
-          head marp_README.md
+          file -i README.md
+          head README.md
 
       - name: Copy images directory (if exists)
         run: | 
           if [[ -d img ]]; then cp -R img build/img; fi
 
-          file -i marp_README.md
-          head marp_README.md
+          file -i README.md
+          head README.md
 
       # Add Marp-specific metadata to the Markdown file before translation
       - name: Insert Marp Style Block
         run: |
-          file -i marp_README.md
-          head marp_README.md
+          file -i README.md
+          head README.md
 
           export LC_ALL=en_US.UTF-8
           export LANG=en_US.UTF-8
 
-          file -i marp_README.md
-          head marp_README.md
+          file -i README.md
+          head README.md
 
           echo "---" > marp_README.md
           echo "marp: true" >> marp_README.md
