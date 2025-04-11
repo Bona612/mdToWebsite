@@ -33,20 +33,18 @@ jobs:
           export LC_ALL=en_US.UTF-8
           export LANG=en_US.UTF-8
 
-          echo "---" > temp_README.md
-          echo "marp: true" >> temp_README.md
-          echo "style: |" >> temp_README.md
-          echo "  section {" >> temp_README.md
-          echo "    background-image: url('./img/DDX_Logo.svg');" >> temp_README.md
-          echo "    background-size: 20%;" >> temp_README.md
-          echo "    background-repeat: no-repeat;" >> temp_README.md
-          echo "    background-position: 95% 30px;" >> temp_README.md
-          echo "  }" >> temp_README.md
-          echo "---" >> temp_README.md
+          echo "---" > marp_README.md
+          echo "marp: true" >> marp_README.md
+          echo "style: |" >> marp_README.md
+          echo "  section {" >> marp_README.md
+          echo "    background-image: url('./img/DDX_Logo.svg');" >> marp_README.md
+          echo "    background-size: 20%;" >> marp_README.md
+          echo "    background-repeat: no-repeat;" >> marp_README.md
+          echo "    background-position: 95% 30px;" >> marp_README.md
+          echo "  }" >> marp_README.md
+          echo "---" >> marp_README.md
 
-          cat README.md >> temp_README.md
-
-          mv temp_README.md README.md
+          cat README.md >> marp_README.md
         shell: bash
 
       - name: Marp Build (README)
