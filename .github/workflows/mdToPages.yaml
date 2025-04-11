@@ -18,6 +18,14 @@ jobs:
       pull-requests: write
     steps:
 
+      - name: Set locale
+        run: |
+          sudo apt-get update && sudo apt-get install -y locales
+          sudo locale-gen en_US.UTF-8
+          export LANG=en_US.UTF-8
+          export LANGUAGE=en_US:en
+          export LC_ALL=en_US.UTF-8
+
       - name: Checkout code
         uses: actions/checkout@v3
 
@@ -67,6 +75,14 @@ jobs:
           args: README.md --allow-local-files -o build/README.pptx
         env:
           MARP_USER: root:root
+
+      - name: Check file encoding and content
+        run: |
+          file -i README.md
+          head README.md
+
+          file -i marp_README.md
+          head marp_README.md
 
       - name: Check if docs folder exists
         id: docs-folder-exists
