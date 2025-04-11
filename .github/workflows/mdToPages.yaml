@@ -34,7 +34,7 @@ jobs:
           echo "marp: true" >> temp_README.md
           echo "style: |" >> temp_README.md
           echo "  section {" >> temp_README.md
-          echo "    background-image: url('./img/DDX_Logo.svg');" >> temp_README.md
+          echo "    background-image: url('https://muralsyourway.vtexassets.com/arquivos/ids/236366/Black-Marble-Texture-Wallpaper-Mural.jpg?v=638164405494500000');" >> temp_README.md
           echo "    background-size: 20%;" >> temp_README.md
           echo "    background-repeat: no-repeat;" >> temp_README.md
           echo "    background-position: 95% 30px;" >> temp_README.md
